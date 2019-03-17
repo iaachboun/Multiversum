@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="assets/style/style.css" type="text/css">
+    <link rel="stylesheet" href="build/assets/style/app.css" type="text/css">
     <title>Title</title>
 </head>
 <body>
@@ -17,9 +17,10 @@
 
     </form>
 </div>
-<div class="header">Header
-    <img class="logo" src="//logo.clearbit.com/spotify.com">
-
+<div class="header">
+    <div class="logo">
+        <img src="assets/img/logo.jpg">
+    </div>
 </div>
 
 <div class="nav">Navigatie

@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "installSass": "npm install -g sass",
+    "build": "sass assets/style/app.scss build/assets/style/app.css;",
+    "watch": "sass --watch assets/style/app.scss build/assets/style/app.css"
+  }
+}

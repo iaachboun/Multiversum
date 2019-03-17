@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*=col-] {
+  float: left;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*=col-] {
+  width: 100%;
+}
+
+/* For tablets: */
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.header .logo {
+  text-align: center;
+  width: 300px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px 86px;
+}
+.header img {
+  width: 200px;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  background-color: aqua;
+}
+
+.header {
+  background-color: #2196F3;
+  width: 100%;
+  min-height: 120px;
+  padding: 20px;
+}
+
+.nav {
+  background-color: chartreuse;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  width: 60px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.content {
+  background-color: pink;
+  width: 100%;
+  overflow: hidden;
+}
+
+article {
+  width: 33.333%;
+  float: left;
+}
+
+.Footer {
+  margin-top: 20px;
+  width: 100%;
+  background-color: red;
+  overflow: hidden;
+  bottom: 0;
+}
+
+.contact ul li {
+  display: block;
+  float: left;
+}
+
+.contact ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/*slider*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+/*INTERFACE*/
+.interface {
+  background-color: red;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.product-overzicht .producten {
+  margin: 0 auto;
+  height: auto;
+  width: 80%;
+}
+.product-overzicht .producten .col-4 {
+  text-align: center;
+}
+.product-overzicht .producten .col-4 .headsets {
+  padding: 10px;
+  height: 280px;
+  background: #bde0e9;
+}
+
+/*# sourceMappingURL=app.css.map */

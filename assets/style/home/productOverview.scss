@@ -1,0 +1,17 @@
+.product-overzicht {
+  .producten {
+    margin: 0 auto;
+    height: auto;
+    width: 80%;
+
+    .col-4 {
+      text-align: center;
+
+      .headsets {
+        padding: 10px;
+        height: 280px;
+        background: #bde0e9;
+      }
+    }
+  }
+}

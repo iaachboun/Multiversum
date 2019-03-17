@@ -1,4 +1,4 @@
-<div class="Footer">Footer
+<div class="Footer">
     <div class="contact">
         <ul>
             <li>Facebook</li>
