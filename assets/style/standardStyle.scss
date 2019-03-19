@@ -1,74 +1,114 @@
-body{
+@import "general/variables";
+
+body {
+  padding: 0;
   margin: 0;
-  background-color: aqua;
+  background: #f5f5f5;
 }
-.header{
+
+.header {
   background-color: #2196F3;
   width: 100%;
   min-height: 120px;
   padding: 20px;
+  box-shadow: -1px -9px 37px 14px black;
+  margin-bottom: 60px;
 }
 
-.nav{
-  background-color: chartreuse;
+.nav {
+  text-align: center;
+  margin: 15px auto -5px auto;
+  right: 0;
+
+  @include respond-to('desktop-mini') {
+    margin: -30px auto 0 auto;
+  }
+}
+
+.nav ul {
   margin: 0 auto;
-  width: 70%;
-}
-
-.nav ul{
   list-style-type: none;
-  margin: 0 ;
   padding: 0;
   overflow: hidden;
+  width: fit-content;
 }
 
-li{
+li {
   float: left;
+
+  &:hover .line {
+    padding: 0 40%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
 }
-li a{
+
+li a {
+  text-align: center;
+  color: white;
   display: block;
-  width: 60px;
   padding: 14px 16px;
   text-decoration: none;
+  transition: all 0.25s ease;
+
+  .line {
+    margin: 0 auto;
+    width: 0;
+    height: 2px;
+    background-color: #071e3d;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+
+  }
 }
 
-.content{
+.content {
   background-color: pink;
   width: 100%;
   overflow: hidden;
 
 }
 
-article{
+article {
   width: 33.333%;
   float: left;
 }
 
-.Footer{
-  margin-top: 20px;
+.Footer {
+  display: none;
+  margin: 20px 0 0 0;
   width: 100%;
-  background-color: red;
-  overflow: hidden;
-  bottom: 0;
+  background-color: #2196F3;
 }
 
-.contact ul li{
+.contact ul li {
   display: block;
   float: left;
 }
 
-.contact ul{
+.contact ul {
   list-style-type: none;
-  margin: 0 ;
+  margin: 0;
   padding: 0;
   overflow: hidden;
 }
+
 /*slider*/
-* {box-sizing: border-box;}
-body {  font-family: "Lucida Sans", sans-serif;
+* {
+  box-sizing: border-box;
 }
-.mySlides {display: none;}
-img {vertical-align: middle;}
+
+body {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -121,22 +161,32 @@ img {vertical-align: middle;}
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+  .text {
+    font-size: 11px
+  }
 }
 
 /*INTERFACE*/
-.interface{
+.interface {
   background-color: red;
   margin: 0 auto;
   width: 50%;

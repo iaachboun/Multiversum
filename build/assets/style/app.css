@@ -80,8 +80,9 @@
 }
 
 body {
+  padding: 0;
   margin: 0;
-  background-color: aqua;
+  background: #f5f5f5;
 }
 
 .header {
@@ -89,30 +90,53 @@ body {
   width: 100%;
   min-height: 120px;
   padding: 20px;
+  box-shadow: -1px -9px 37px 14px black;
+  margin-bottom: 60px;
 }
 
 .nav {
-  background-color: chartreuse;
-  margin: 0 auto;
-  width: 70%;
+  text-align: center;
+  margin: 15px auto -5px auto;
+  right: 0;
+}
+@media (min-width: 1000px) {
+  .nav {
+    margin: -30px auto 0 auto;
+  }
 }
 
 .nav ul {
+  margin: 0 auto;
   list-style-type: none;
-  margin: 0;
   padding: 0;
   overflow: hidden;
+  width: fit-content;
 }
 
 li {
   float: left;
 }
+li:hover .line {
+  padding: 0 40%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
 
 li a {
+  text-align: center;
+  color: white;
   display: block;
-  width: 60px;
   padding: 14px 16px;
   text-decoration: none;
+  transition: all 0.25s ease;
+}
+li a .line {
+  margin: 0 auto;
+  width: 0;
+  height: 2px;
+  background-color: #071e3d;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .content {
@@ -127,11 +151,10 @@ article {
 }
 
 .Footer {
-  margin-top: 20px;
+  display: none;
+  margin: 20px 0 0 0;
   width: 100%;
-  background-color: red;
-  overflow: hidden;
-  bottom: 0;
+  background-color: #2196F3;
 }
 
 .contact ul li {
@@ -242,18 +265,133 @@ img {
   width: 50%;
 }
 
+.product-overzicht {
+  /* Handle */
+  /* Handle on hover */
+  /* The dots/bullets/indicators */
+}
 .product-overzicht .producten {
   margin: 0 auto;
   height: auto;
-  width: 80%;
+  background: #a8c2ff;
+}
+.product-overzicht .producten img {
+  width: 300px;
+  height: auto;
+}
+@media (min-width: 550px) {
+  .product-overzicht .producten img {
+    width: 200px;
+  }
+}
+@media (min-width: 750px) {
+  .product-overzicht .producten img {
+    width: 250px;
+  }
+}
+@media (min-width: 1680px) {
+  .product-overzicht .producten img {
+    width: 300px;
+  }
 }
 .product-overzicht .producten .col-4 {
   text-align: center;
+  width: 100%;
+}
+@media (min-width: 550px) {
+  .product-overzicht .producten .col-4 {
+    width: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  .product-overzicht .producten .col-4 {
+    width: 33.33%;
+  }
 }
 .product-overzicht .producten .col-4 .headsets {
   padding: 10px;
-  height: 280px;
+  height: 350px;
   background: #bde0e9;
+}
+.product-overzicht * {
+  box-sizing: border-box;
+  padding: 0;
+}
+.product-overzicht h3 {
+  text-align: center;
+}
+.product-overzicht .hideOrShow::-webkit-scrollbar {
+  height: 0;
+}
+.product-overzicht ::-webkit-scrollbar {
+  height: 10px;
+}
+.product-overzicht ::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
+}
+.product-overzicht ::-webkit-scrollbar-thumb:hover {
+  background-color: #717171;
+}
+.product-overzicht .slider {
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100%);
+  scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: scroll;
+  overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  margin: 15px 0 10px 0;
+  padding-bottom: 15px;
+  position: relative;
+  min-height: 280px;
+}
+.product-overzicht .slider:active {
+  cursor: grabbing;
+  background: white;
+}
+.product-overzicht section {
+  user-select: none;
+  width: 100%;
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+  color: black;
+  height: fit-content;
+}
+.product-overzicht .review-container {
+  text-align: center;
+  width: 100vw;
+  display: inline-flex;
+}
+.product-overzicht .review-pages {
+  text-align: center;
+  margin: 0 auto;
+}
+.product-overzicht .review-pagination {
+  position: absolute;
+  right: 10px;
+}
+.product-overzicht .review-pagination, .product-overzicht .right {
+  right: 0;
+}
+.product-overzicht .slide {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  border: none;
+}
+.product-overzicht .dot:hover {
+  background-color: #717171;
+}
+.product-overzicht .review {
+  margin: 0 auto;
+  width: 80%;
 }
 
 /*# sourceMappingURL=app.css.map */

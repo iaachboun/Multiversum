@@ -21,13 +21,12 @@
     <div class="logo">
         <img src="assets/img/logo.jpg">
     </div>
-</div>
-
-<div class="nav">Navigatie
-    <ul>
-        <li><a href="#">Home</a> </li>
-        <li><a href="#">Page2</a> </li>
-        <li><a href="#">Page3</a> </li>
-        <li><a href="#">Contact</a> </li>
-    </ul>
+    <div class="nav">
+        <ul>
+            <li><a href="#">Home</a><div class="line"></div></li>
+            <li><a href="#">Page2</a><div class="line"></div></li>
+            <li><a href="#">Page3</a><div class="line"></div></li>
+            <li><a href="#">Contact</a><div class="line"></div></li>
+        </ul>
+    </div>
 </div>
