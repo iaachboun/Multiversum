@@ -1,12 +1,10 @@
 <?php
 
 include 'header.php';
-include 'view/home/ProductOverzicht.php';
 
-// require('./controller/pageController.php');
+require_once 'controller/WebsiteController.php';
 
-// $controller = new ContactsController();
-// $controller->handleRequest();
-
+$controller = new WebsiteController();
+$controller->handleRequest();
 
 include 'footer.php';

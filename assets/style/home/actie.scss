@@ -1,0 +1,30 @@
+.actie-title {
+  width: fit-content;
+  margin: 10px auto;
+}
+
+.actie-sectie {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  background: #f1c40f;
+  user-select: none;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  img {
+    background: white;
+    width: 40%;
+    float: left;
+    max-width: 250px;
+  }
+
+  .description {
+    float: right;
+    width: 50%;
+  }
+}

@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 class DataHandler{
     private $host;
     private $dbdriver;
@@ -15,7 +15,7 @@ class DataHandler{
         $this->password = $password;
 
         try {
-            $this->dbh = new PDO("localhost:host=mysql;dbname=webshopMultiversum", 'ilias', '12345');
+            $this->dbh = new PDO("$this->dbdriver:host=$this->host;dbname=$this->dbname", $this->username, $this->password);
             $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return true;
         } catch (PDOException $e) {
@@ -23,14 +23,31 @@ class DataHandler{
         }
     }
 
-    public function headsetOverview() {
-        $sql = "SELECT * FROM productenoverzicht;";
-        return $this->dbh->query($sql,PDO::FETCH_ASSOC);
-    }
-
     public function __destruct()
     {
         $this->dbh = null;
     }
+
+    public function createData($sql){
+        return $this->dbh->query($sql);
+    }
+
+    public function readData($sql){
+        $this->query($sql);
+        return $this->sth->fetch(PDO::FETCH_ASSOC);
+    }
+    public function readsData($sql){
+        // $this->query($sql);
+        return $this->dbh->query($sql,PDO::FETCH_ASSOC);
+    }
+    public function updateData($sql){
+        $this->query($sql);
+        return $this->rowCount();
+    }
+    public function deleteData($sql){
+        $sth = $this->dbh->query($sql);
+        return $sth->rowCount();
+    }
 }
-?> -->
+?>
+

@@ -1,65 +1,20 @@
 @import "general/variables";
 
+
+
 body {
   padding: 0;
   margin: 0;
-  background: #f5f5f5;
+  background: #ebf0ff;
 }
 
 .header {
-  background-color: #2196F3;
+  background-color: white;
   width: 100%;
   min-height: 120px;
   padding: 20px;
-  box-shadow: -1px -9px 37px 14px black;
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 60px;
-}
-
-.nav {
-  text-align: center;
-  margin: 15px auto -5px auto;
-  right: 0;
-
-  @include respond-to('desktop-mini') {
-    margin: -30px auto 0 auto;
-  }
-}
-
-.nav ul {
-  margin: 0 auto;
-  list-style-type: none;
-  padding: 0;
-  overflow: hidden;
-  width: fit-content;
-}
-
-li {
-  float: left;
-
-  &:hover .line {
-    padding: 0 40%;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-}
-
-li a {
-  text-align: center;
-  color: white;
-  display: block;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition: all 0.25s ease;
-
-  .line {
-    margin: 0 auto;
-    width: 0;
-    height: 2px;
-    background-color: #071e3d;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-
-  }
 }
 
 .content {

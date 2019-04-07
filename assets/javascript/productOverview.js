@@ -1,4 +1,3 @@
-
 //lets you slide to the left or right
 const slider = document.getElementById('slider');
 let isDown = false;
@@ -7,7 +6,6 @@ let scrollLeft;
 var pixels = $(window).width();
 var count = 1;
 var inViewPort;
-
 slider.addEventListener('mousedown', (e) => {
     isDown = true;
     slider.classList.add('active');
