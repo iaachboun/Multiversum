@@ -4,7 +4,11 @@
 
 <?php require '../model/connectDatabase.php';
 
-$id = $_REQUEST['id'];
+$id = $_REQUEST['hidden_id'];
+$ChangedPrice = $_REQUEST['price'];
+
+$newPrice = "UPDATE `productenoverzicht` SET NewPrice = $ChangedPrice WHERE id = $id;";
+$result = $conn->query($newPrice);
 
 $checkActie = "SELECT * FROM productenoverzicht WHERE id = $id;";
 $result = $conn->query($checkActie);
@@ -15,11 +19,11 @@ while ($data = $result->fetch_assoc()) {
     if ($actie == 1) {
         $addActie = "UPDATE `productenoverzicht` SET actie = FALSE WHERE id = $id;";
         $result = $conn->query($addActie);
-        require 'admin_home.php';
+        header("location:admin_home.php");
     } else if ($actie == 0) {
         $addActie = "UPDATE `productenoverzicht` SET actie = TRUE WHERE id = $id;";
         $result = $conn->query($addActie);
-        require 'admin_home.php';
+        header("location:admin_home.php");
     }
 }
 

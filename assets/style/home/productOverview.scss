@@ -6,7 +6,8 @@
     padding: 10px;
     margin: 0 auto;
     height: auto;
-    background: #1bbc9b;
+    background: aliceblue;
+    color: black;
 
     img {
       padding: 20px;
@@ -34,13 +35,28 @@
       @include respond-to('desktop-mini') {
         width: 33.33%;
       }
-      .headsets {
-        padding: 10px;
-        color: white;
-        a {
-          color: #071e3d;
-          text-decoration: none;
-        }
+    }
+
+    .headsets {
+      margin: 0 auto;
+      padding: 10px;
+
+      @include respond-to('desktop-mini') {
+        width: 50%;
+        float: left;
+      }
+
+      a {
+        color: #071e3d;
+        text-decoration: none;
+
+      }
+    }
+
+    .mapouter {
+      @include respond-to('desktop-mini') {
+        float: left;
+        width: 50%;
       }
     }
   }
@@ -145,3 +161,6 @@
     width: 80%;
   }
 }
+
+
+

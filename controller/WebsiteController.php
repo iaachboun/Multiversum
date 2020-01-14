@@ -31,7 +31,7 @@ class WebsiteController
                     include 'view/contact.php';
                     break;
                 case 'admin':
-                    include 'view/Restricted/admin_home.php';
+                    include 'Restricted/admin_home.php';
                     break;
                 default:
                     include 'view/home.php';

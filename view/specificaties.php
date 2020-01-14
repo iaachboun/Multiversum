@@ -51,10 +51,11 @@ $data = $result->fetch_assoc(); ?>
     <p>Resolutie: <?php echo $data['Resolutie']?></p>
     <p>Kleur: <?php echo $data['Kleur']?></p>
     <p>Platform: <?php echo $data['Platform']?></p>
-    <p>Gezichtsveld: <?php echo $data['Gezichtsveld']?></p>
+    <p>Gezichtsveld: <?php echo $data['Gezichtsveld']?>°</p>
     <p>Gewicht: <?php echo $data['Gewicht']?></p>
     <p>Beschrijving: <?php echo $data['Beschrijving']?></p>
     <h3>€ <?php echo $data['Prijs']?></h3>
+
 </div>
 
 </body>

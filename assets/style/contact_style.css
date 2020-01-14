@@ -1,0 +1,36 @@
+
+.mailform{
+    width: fit-content;
+    background-color: none;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: 0 auto;
+    display: none;
+
+}
+
+
+
+.mailform input[type=text], textarea {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: darkgoldenrod;
+}
+
+label{
+    text-align: left !important;
+}
+
+.mailverzenden{
+    width: 100%;
+    font-size: 20px;
+    border-radius: 50px;
+    margin-top: 10px;
+    background-color: #f1c40f;
+    border-color: none; !important;
+    border-width: 0px;
+}

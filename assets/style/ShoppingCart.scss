@@ -1,5 +1,38 @@
-.shopping-list {
-  width: 60%;
-  background: #1bbc9b;
+.tabel-shopping-cart {
+  width: fit-content;
   margin: 0 auto;
+}
+
+.prijs {
+  float: right;
+}
+
+.totaal {
+  margin-top: 20px;
+  font-size: 1.3em;
+}
+
+.totaal .cell:nth-child(1) {
+  width: 160px;
+  float: left;
+}
+
+.totaal .cell:nth-child(2) {
+  text-align: right;
+  float: right;
+}
+
+.subtotaal, .btw {
+  font-size: 0.9em;
+}
+
+.empty-cart {
+  margin: 200px auto;
+  width: fit-content;
+  text-align: center;
+  color: #0B2038;
+  p:nth-child(1) {
+    margin: 0;
+    font-size: 2em;
+  }
 }

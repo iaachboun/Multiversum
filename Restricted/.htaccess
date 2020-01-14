@@ -1,0 +1,6 @@
+AuthGroupFile /dev/null
+AuthType Basic
+AuthUserFile /home/ilias/domains/multiversum.ga/.htpasswd/public_html/Restricted/.htpasswd
+AuthName "Beheer"
+require valid-user
+ErrorDocument 401 "Unauthorized Access"

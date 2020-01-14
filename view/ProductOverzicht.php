@@ -63,6 +63,25 @@ $result06 = $conn->query($sql06);
 
 
 ?>
+<style>
+    input[name=quantity]{
+        width: 30px;
+        text-align: center;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+    }
+
+    input[name=add_to_cart]{
+        background-color: #efc117;
+        box-shadow: none;
+        border: none;
+        padding: 5px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+    }
+</style>
 <section class="product-overzicht">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <div class="review-pages">
@@ -102,14 +121,12 @@ $result06 = $conn->query($sql06);
                                             <p>Prijs: € <?php echo $data['Prijs'] ?></p>
                                             <a href="./view/home/specificaties.php?id=<?php echo $data['id'] ?>">Lees
                                                 meer</a><br>
-                                            <a href="?page=winkelwagen&id=<?php echo $data['id'] . '&naam=' . $data['Naam'] . '&prijs=' . $data['Prijs'] ?>">Naar
-                                                winkelwagen</a>
                                         </div>
-                                        <input type="text" name="quantity" value="1">
+                                        <input type="text" name="quantity" value="1" class="quantity">
                                         <input type="hidden" name="hidden_name" value="<?php echo $data['Naam'] ?>">
                                         <input type="hidden" name="hidden_id" value="<?php echo $data['id'] ?>">
                                         <input type="hidden" name="hidden_price" value="<?php echo $data['Prijs'] ?>">
-                                        <input type="submit" name="add_to_cart" value="Add to cart">
+                                        <input type="submit" name="add_to_cart" value="Bestel nu">
                                     </div>
                                 </form>
 
@@ -135,14 +152,12 @@ $result06 = $conn->query($sql06);
                                             <p>Prijs: € <?php echo $data['Prijs'] ?></p>
                                             <a href="./view/home/specificaties.php?id=<?php echo $data['id'] ?>">Lees
                                                 meer</a><br>
-                                            <a href="?page=winkelwagen&id=<?php echo $data['id'] . '&naam=' . $data['Naam'] . '&prijs=' . $data['Prijs'] ?>">Naar
-                                                winkelwagen</a>
                                         </div>
                                         <input type="text" name="quantity" value="1">
                                         <input type="hidden" name="hidden_name" value="<?php echo $data['Naam'] ?>">
                                         <input type="hidden" name="hidden_id" value="<?php echo $data['id'] ?>">
                                         <input type="hidden" name="hidden_price" value="<?php echo $data['Prijs'] ?>">
-                                        <input type="submit" name="add_to_cart" value="Add to cart">
+                                        <input type="submit" name="add_to_cart" value="Bestel nu">
                                     </div>
                                 </form>
                             <?php } ?>
@@ -167,14 +182,12 @@ $result06 = $conn->query($sql06);
                                             <p>Prijs: € <?php echo $data['Prijs'] ?></p>
                                             <a href="./view/home/specificaties.php?id=<?php echo $data['id'] ?>">Lees
                                                 meer</a><br>
-                                            <a href="?page=winkelwagen&id=<?php echo $data['id'] . '&naam=' . $data['Naam'] . '&prijs=' . $data['Prijs'] ?>">Naar
-                                                winkelwagen</a>
                                         </div>
                                         <input type="text" name="quantity" value="1">
                                         <input type="hidden" name="hidden_name" value="<?php echo $data['Naam'] ?>">
                                         <input type="hidden" name="hidden_id" value="<?php echo $data['id'] ?>">
                                         <input type="hidden" name="hidden_price" value="<?php echo $data['Prijs'] ?>">
-                                        <input type="submit" name="add_to_cart" value="Add to cart">
+                                        <input type="submit" name="add_to_cart" value="Bestel nu">
                                     </div>
                                 </form>
                             <?php } ?>
@@ -199,14 +212,12 @@ $result06 = $conn->query($sql06);
                                             <p>Prijs: € <?php echo $data['Prijs'] ?></p>
                                             <a href="./view/home/specificaties.php?id=<?php echo $data['id'] ?>">Lees
                                                 meer</a><br>
-                                            <a href="?page=winkelwagen&id=<?php echo $data['id'] . '&naam=' . $data['Naam'] . '&prijs=' . $data['Prijs'] ?>">Naar
-                                                winkelwagen</a>
                                         </div>
                                         <input type="text" name="quantity" value="1">
                                         <input type="hidden" name="hidden_name" value="<?php echo $data['Naam'] ?>">
                                         <input type="hidden" name="hidden_id" value="<?php echo $data['id'] ?>">
                                         <input type="hidden" name="hidden_price" value="<?php echo $data['Prijs'] ?>">
-                                        <input type="submit" name="add_to_cart" value="Add to cart">
+                                        <input type="submit" name="add_to_cart" value="Bestel nu">
                                     </div>
                                 </form>
                             <?php } ?>
@@ -217,3 +228,12 @@ $result06 = $conn->query($sql06);
         </section>
     </div>
 </section>
+<?php
+$total = $total + ($values["item_quantity"] * $values["item_price"]);
+$btw = $total / 100 * 21;
+$inclbtw = $total + $btw;
+$aantal = $values['item_quantity'] + $aantal;
+
+$cookie_name = "cart_counter";
+$cookie_value = "$aantal";
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
